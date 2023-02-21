@@ -1,6 +1,6 @@
 {
   "name": "vswf_activities",
-  "version": "0.1.0",
+  "version": "0.1.01",
   "description": "test activity packaging",
   "main": "main.js",
   "scripts": {

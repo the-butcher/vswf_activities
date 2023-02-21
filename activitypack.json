@@ -1,1 +1,29 @@
-{"activities":[{"action":"uuid:0f3fc94b-a092-417b-8742-17811d04efb1::PackageableActivity01Activity","category":"Custom Activities","description":"testing the possibility to package an activity","displayName":"PackageableActivity01","inputs":{"inputString":{"description":"The first input to the activity.","displayName":"inputString","isRequired":true,"name":"inputString","typeName":"string"}},"outputs":{"result":{"description":"The result of the activity.","displayName":"Result","name":"result","typeName":"number"}},"suite":"uuid:0f3fc94b-a092-417b-8742-17811d04efb1"}],"elements":[]}
+{
+    "activities": [
+        {
+            "action": "uuid:0f3fc94b-a092-417b-8742-17811d04efb1::PackageableActivity01Activity",
+            "category": "Custom Activities",
+            "description": "testing the possibility to package an activity",
+            "displayName": "PackageableActivity01",
+            "inputs": {
+                "inputString": {
+                    "description": "The first input to the activity.",
+                    "displayName": "inputString",
+                    "isRequired": true,
+                    "name": "inputString",
+                    "typeName": "string"
+                }
+            },
+            "outputs": {
+                "result": {
+                    "description": "The result of the activity.",
+                    "displayName": "Result",
+                    "name": "result",
+                    "typeName": "number"
+                }
+            },
+            "suite": "uuid:0f3fc94b-a092-417b-8742-17811d04efb1"
+        }
+    ],
+    "elements": []
+}
