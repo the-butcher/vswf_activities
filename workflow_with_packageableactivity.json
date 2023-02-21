@@ -1,1 +1,158 @@
-{"_properties":{"isServerWorkflow":false},"components":[{"id":2,"steps":[{"id":3,"inputs":{},"position":"0,0","purpose":"start","title":"Start","transitions":[{"id":5,"position":"90,60 90,190","target":{"id":4}}]},{"action":"uuid:0f3fc94b-a092-417b-8742-17811d04efb1::PackageableActivity01Activity","id":4,"inputs":{"inputString":{"accessors":[],"code":"\"2502.1972\"","source":"\"2502.1972\""}},"name":"packageableActivity01Activity1","position":"-30,190","title":"PackageableActivity01","transitions":[{"id":7,"position":"90,260 90,400","sourceConnector":"bottom","target":{"id":6},"targetConnector":"top"}]},{"action":"gcx:wf:core::Log","id":6,"inputs":{"message":{"accessors":["$packageableActivity01Activity1"],"annotations":[{"count":31,"index":0,"kind":"idref"}],"code":"$packageableActivity01Activity1.result","source":"$packageableActivity01Activity1.result"}},"position":"-30,400","title":"Log"}]}],"deploymentConfig":{"supportedApps":{"GWV":true}},"designerVersion":"5.31.0+20","licenseInfo":{"licenseUrl":"https://nbfleischer.int.vertigis.com/vertigisstudio/workflow/service/auth/license"},"references":[{"id":19,"path":"https://nbfleischer.int.vertigis.com/vswf_activities","suite":"uuid:0f3fc94b-a092-417b-8742-17811d04efb1"}],"start":{"id":3}}
+{
+    "_properties": {
+        "isServerWorkflow": false
+    },
+    "components": [
+        {
+            "id": 2,
+            "steps": [
+                {
+                    "id": 3,
+                    "inputs": {},
+                    "position": "0,0",
+                    "purpose": "start",
+                    "title": "Start",
+                    "transitions": [
+                        {
+                            "id": 21,
+                            "position": "90,60 90,130",
+                            "sourceConnector": "bottom",
+                            "target": {
+                                "id": 20
+                            },
+                            "targetConnector": "top"
+                        }
+                    ]
+                },
+                {
+                    "action": "uuid:0f3fc94b-a092-417b-8742-17811d04efb1::PackageableActivity01Activity",
+                    "id": 4,
+                    "inputs": {
+                        "inputString": {
+                            "accessors": [
+                                "$INPUT_INPUT_STRING"
+                            ],
+                            "annotations": [
+                                {
+                                    "count": 19,
+                                    "index": 0,
+                                    "kind": "idref"
+                                }
+                            ],
+                            "code": "$INPUT_INPUT_STRING.result",
+                            "source": "$INPUT_INPUT_STRING.result"
+                        }
+                    },
+                    "name": "packageableActivity01Activity1",
+                    "position": "-30,420",
+                    "title": "PackageableActivity01",
+                    "transitions": [
+                        {
+                            "id": 7,
+                            "position": "90,490 90,550",
+                            "sourceConnector": "bottom",
+                            "target": {
+                                "id": 6
+                            },
+                            "targetConnector": "top"
+                        }
+                    ]
+                },
+                {
+                    "action": "gcx:wf:core::Log",
+                    "id": 6,
+                    "inputs": {
+                        "message": {
+                            "accessors": [
+                                "$packageableActivity01Activity1"
+                            ],
+                            "annotations": [
+                                {
+                                    "count": 31,
+                                    "index": 0,
+                                    "kind": "idref"
+                                }
+                            ],
+                            "code": "$packageableActivity01Activity1.result",
+                            "source": "$packageableActivity01Activity1.result"
+                        }
+                    },
+                    "position": "-30,550",
+                    "title": "Log"
+                },
+                {
+                    "action": "gcx:wf:core::GetWorkflowInputs",
+                    "id": 20,
+                    "inputs": {},
+                    "name": "getWorkflowInputs1",
+                    "position": "-30,130",
+                    "title": "Get Workflow Inputs",
+                    "transitions": [
+                        {
+                            "id": 26,
+                            "position": "90,200 90,260",
+                            "sourceConnector": "bottom",
+                            "target": {
+                                "id": 25
+                            },
+                            "targetConnector": "top"
+                        }
+                    ]
+                },
+                {
+                    "action": "gcx:wf:core::CreateValue",
+                    "id": 25,
+                    "inputs": {
+                        "expression": {
+                            "accessors": [
+                                "$getWorkflowInputs1"
+                            ],
+                            "annotations": [
+                                {
+                                    "count": 19,
+                                    "index": 0,
+                                    "kind": "idref"
+                                }
+                            ],
+                            "code": "$getWorkflowInputs1.inputs['inputString']",
+                            "source": "$getWorkflowInputs1.inputs['inputString']"
+                        }
+                    },
+                    "name": "INPUT_INPUT_STRING",
+                    "position": "-30,260",
+                    "title": "input string",
+                    "transitions": [
+                        {
+                            "id": 27,
+                            "position": "90,330 90,420",
+                            "sourceConnector": "bottom",
+                            "target": {
+                                "id": 4
+                            },
+                            "targetConnector": "top"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "deploymentConfig": {
+        "supportedApps": {
+            "GWV": true
+        }
+    },
+    "designerVersion": "5.31.0+20",
+    "licenseInfo": {
+        "licenseUrl": "https://nbfleischer.int.vertigis.com/vertigisstudio/workflow/service/auth/license"
+    },
+    "references": [
+        {
+            "id": 31,
+            "path": "https://nbfleischer.int.vertigis.com/vswf_activities",
+            "suite": "uuid:0f3fc94b-a092-417b-8742-17811d04efb1"
+        }
+    ],
+    "start": {
+        "id": 3
+    }
+}
